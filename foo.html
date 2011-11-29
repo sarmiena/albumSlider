@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/jquery-ui.js"></script>
+    <script src="javascripts/albumSlider.js"></script>
+    <script>
+      $(function() {
+        $("#slider").albumSlider({
+          startIndex: 1, 
+          viewportSize: 7, 
+          duration: 750,
+          focusedHeight: '281px',
+          focusedWidth: '205px',
+          secondTierHeight: '70%',
+          secondTierWidth: '70%',
+          otherTierHeight: '80%',
+          otherTierWidth: '80%',
+          tierCss: {
+            '1': {'top': '0px'},
+            '2': {'top': '70px'},
+            '3': {'top': '100px'},
+            '4': {'top': '130px'}
+          }
+        });
+      });
+    </script>
+    <style>
+      body { background-color: #0e0708; }
+      #slider { 
+        list-style-type: none; 
+        height: 281px;
+      }
+
+      #slider li {
+        float: left; 
+        position: relative;
+      }
+
+      #slider .container { 
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden;
+      }
+
+      #slider img {height: 100%; display: inline-block;}
+
+      .album-slider-hiding {z-index: 0;}
+      [data-side='right'] {margin-left: -30px;}
+      [data-side='left'] {margin-right: -30px;}
+      [data-side='focus'] .caption {display: block;}
+      .caption {
+        display: none;
+        position: absolute; 
+        bottom: -40px; 
+        text-align: center; 
+        width: 100%; 
+        color: #8bc16e; 
+        padding: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id='slider'>
+      <li>
+        <div class='container'><img src='images/img3.png'/></div>
+        <div class='caption'>Moonglow Bank</div>
+      </li>
+      <li>
+        <div class='container'><img src='images/img4.png'/></div>
+        <div class='caption'>Sweet Dreams Inn</div>
+      </li>
+      <li>
+        <div class='container'><img src='images/img5.png'/></div>
+        <div class='caption'>Duel Roof</div>
+      </li>
+      <li>
+        <div class='container'><img src='images/img6.png'/></div>
+        <div class='caption'>Buccaneer's Den</div>
+      </li>
+      <li>
+        <div class='container'><img src='images/img7.png'/></div>
+        <div class='caption'>The Crossroads</div>
+      </li>
+      <li>
+        <div class='container'><img src='images/img8.png'/></div>
+        <div class='caption'>Felucca</div>
+      </li>
+      <li>
+        <div class='container'><img src='images/img9.png'/></div>
+        <div class='caption'>Vesper Mines</div>
+      </li>
+    </ul>
+  </body>
+</html>
